@@ -1,0 +1,64 @@
+Printer Driver Installer Script
+
+ESPAÑOL:
+
+Este script fue creado para Debian/Ubuntu y derivados. Si tienes otras distros con otra base como por ejemplo Arch o Fedora necesitas hacer unos cambios en el código para que cumpla su función
+
+Este script permite instalar cualquier driver .deb de impresora que no funciona si simplemente lo instalas de manera normal. El driver incluido a continuación es solo un ejemplo de cómo debe tener el nombre una vez copiado y pegado el paquete .deb, solo reemplaza el existente (No puede descargar directamente los .deb de cada fabricante excepto si se hacen cambios en el codigo)
+
+Para descargar el Script...
+
+Hay varias maneras de hacerlo, simplemente descargando el código desde este repositorio y descomprimiendolo, o usando comandos como "git clone", "wget" o "curl" en la terminal, luego debes descargar el driver de tu impresora y renombrarlo a "driver.deb", y pegarlo en la carpeta al lado del script reemplazando el archivo .deb de ejemplo (el de ejemplo es para una Brother DCP-T510W, si tu impresora es esa no hace falta reemplazarlo, de lo contrario si no funciona entonces sí).
+
+Ejecutar el Script...
+
+Ve a donde se encuentra el archivo "install.sh", haz clic derecho y selecciona propiedades, busca en el apartado de permisos y selecciona una opción llamada "Permitir ejecutar como un programa" o "Permiso de ejecución: Cualquiera/Usuario".
+
+Luego regresa a la carpeta y haz doble clic, si pregunta si ejecutar normal o en terminal selecciona "Ejecutar en terminal", si no funciona debería abrirse sin problemas. Si no abre prueba otro gestor de archivos como por ejemplo PCMan
+
+Lo que hace el script...
+
+Primeramente actualiza los repositorios de la distro, luego instala soporte para la arquitectura i386 (32 bits, necesario para ciertos drivers. El proceso es bastante rápido)
+
+Luego instala el driver.deb, pero OJO, todavía faltan pasos, porque sin esos el driver podria no funcionar.
+
+Después instala paquetes adicionales para que el driver pueda funcionar y ser reconocido por el sistema Debian/Ubuntu o derivados. 
+Por último se limpia la consola y pide confirmación para salir, o en algunos casos se cierra automáticamente, eso significa que ya está listo y solo necesitas probarlo...
+
+Nota: debes estar vigilando la ejecución del script, ya que éste pedirá permisos root y confirmaciones constantes para cada paso, pero a cambio te facilita la vida y hasta podria sacarte de un apuro.
+
+Recuerda descomprimirlo adentro de una carpeta separada para que no se mezclen con otros archivos.
+
+Gracias por leer. Hecho con amor y cariño por Matias01jr, mientras buscaba solución para instalar drivers de impresora en una distro Debian. Cualquier contribución es bienvenida, si lo deseas puedes hacer fork y hacer tu propia versión, tal vez mejorada o para otras distros, cada ayuda es bienvenida, y no tengo ninguna finalidad de lucro a menos que se ofrezcan a donar por algún medio ❤️
+
+ENGLISH:
+
+This script was created for Debian/Ubuntu and derivatives. If you have other distributions with a different base, such as Arch or Fedora, you'll need to make some changes to the code for it to work.
+
+This script allows you to install any .deb printer driver that doesn't work if you simply install it normally. The driver included below is just an example of how the name should be once you copy and paste the .deb package; it only replaces the existing one. (You cannot directly download the .deb files for each manufacturer unless you make changes to the code.)
+
+To download the script...
+
+There are several ways to do this: simply download the code from this repository and extract it, or use commands like "git clone", "wget", or "curl" in the terminal. Then, download the driver for your printer and rename it to "driver.deb", and paste it into the folder next to the script, replacing the example .deb file. (The example is for a Brother DCP-T510W; if your printer is that model, you don't need to replace it, otherwise, if it doesn't work, then you should.)
+
+Run the Script...
+
+Go to the location of the "install.sh" file, right-click it, and select Properties. In the Permissions section, select the option called "Allow executing file as a program" or "Execution permission: Anyone/User".
+
+Then return to the folder and double-click the file. If it asks whether to run it normally or in the terminal, select "Run in terminal". If it doesn't work, it should open without problems. If it still doesn't open, try another file manager such as PCMan.
+
+What the script does...
+
+First, it updates the distro's repositories. Then, it installs support for the i386 architecture (32-bit, necessary for certain drivers. The process is quite fast).
+
+Next, it installs the driver.deb file, but be aware that there are still some steps missing, because without them the driver might not work.
+
+Afterward, it installs additional packages so that the driver can function and be recognized by the Debian/Ubuntu system or derivatives. Finally, the console is cleared and it asks for confirmation to exit, or in some cases, it closes automatically. This means it's ready and you just need to test it.
+
+Note: You must keep an eye on the script's execution, as it will request root privileges and constant confirmations for each step. However, in return, it makes your life easier and could even get you out of a tight spot.
+
+Remember to extract it into a separate folder so it doesn't get mixed up with other files.
+
+Thanks for reading. Made with love and care by Matias01jr, while looking for a solution to install printer drivers on a Debian distro. Any contribution is welcome. If you wish, you can fork it and make your own version, perhaps improved or for other distros. Every bit of help is welcome, and I have no profit motive unless you offer to donate through some means ❤️
+
+
